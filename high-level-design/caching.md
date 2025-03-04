@@ -1,6 +1,6 @@
 
 # Caching
-## revise
+## test yourself
 1. define cache, caching, cache miss, cache hit, cache eviction, cache staleness.
 2. how caching works?
 3. why caching important?
