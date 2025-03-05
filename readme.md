@@ -15,4 +15,5 @@ we will learn about the high level and low level design. following are the few t
 
 ### Design Patterns
 
-- [Strategy design pattern](/low-level-design/strategy-design-pattern.md)
+- [Strategy design pattern](/low-level-design/strategy-design-pattern.md):- It allows you to define a family of algorithms
+- [Observer design pattern](/low-level-design/obeserver-design-pattern.md)
