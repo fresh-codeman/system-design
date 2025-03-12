@@ -30,7 +30,7 @@ It involves dividing a database table into multiple partitions or shards, with e
 
 For example, consider a social media platform that stores user data in a database table. The platform might partition the user table horizontally based on the geographic location of the users, so that users in the United States are stored in one shard, users in Europe are stored in another shard, and so on. This way, when a user logs in and their data needs to be accessed, the query can be directed to the appropriate shard, minimizing the amount of data that needs to be scanned.
 
-The key problem with this approach is that if the value whose range is used for partitioning isn’t chosen carefully, then the partitioning scheme will lead to unbalanced servers. For instance, partitioning users based on their geographic location assumes an even distribution of users across different regions, which may not be valid due to the presence of densely or sparsely populated areas
+The key problem with this approach is that if the value whose range is used for partitioning isn’t chosen carefully, then the partitioning scheme will **lead to unbalanced servers**. For instance, partitioning users based on their geographic location assumes an even distribution of users across different regions, which may not be valid due to the presence of densely or sparsely populated areas
 ![horizontal vs vertical partitioning](/assets/images/horizontal-vs-vertical-partitioning.png)
 
 ### Vertical partitioning
@@ -90,7 +90,7 @@ Snapshot: Many cloud service providers, given their diverse clientele and global
 7. Simplified Data Management:- Data management tasks, such as backup, archiving, and maintenance, more manageable and efficient. By dealing with smaller, more focused partitions, these tasks can be performed more quickly and with less impact on overall system performance.
 8. Better Resource Utilization:- Partitioning data based on specific attributes or access patterns can lead to better resource utilization. By aligning the data with the appropriate storage and processing resources, organizations can maximize the performance and efficiency of their data-driven systems.
 
-Example: A weather forecasting service uses horizontal partitioning to store weather data based on geographical locations. This allows the service to allocate more resources to process data for areas with higher user demand, ensuring that resources are used efficiently and in line with user needs.
+    Example: A weather forecasting service uses horizontal partitioning to store weather data based on geographical locations. This allows the service to allocate more resources to process data for areas with higher user demand, ensuring that resources are used efficiently and in line with user needs.
 
 9. Improved Data Security:- Enhance data security by segregating sensitive information from less sensitive data. By isolating sensitive data in separate partitions, organizations can implement stronger security measures for those partitions, minimizing the risk of unauthorized access or data breaches.
 10. Faster Data Recovery:- In the event of a system failure or data loss, By focusing on recovering specific partitions rather than the entire dataset, organizations can reduce downtime and restore critical data more quickly.
@@ -108,10 +108,10 @@ Example: A weather forecasting service uses horizontal partitioning to store wea
 
 6. Partition Maintenance:- Managing and maintaining partitions can be a challenging and resource-intensive task. As the data grows and evolves, organizations may need to reevaluate their partitioning strategies, which can involve repartitioning, merging, or splitting partitions. This can result in additional maintenance overhead and increased complexity. Here are a few other maintenance challenges:
 
-Backup Challenges: Performing backups isn't straightforward anymore. You need to ensure data consistency across all shards.
+    Backup Challenges: Performing backups isn't straightforward anymore. You need to ensure data consistency across all shards.
 
-Patch Management: When a security update rolls out, it needs to be applied across all shards, sometimes simultaneously, to maintain compatibility and security.
+    Patch Management: When a security update rolls out, it needs to be applied across all shards, sometimes simultaneously, to maintain compatibility and security.
 
-Monitoring Woes: Instead of one set of metrics, DB administrators now need to monitor multiple, making anomaly detection a more daunting task.
+    Monitoring Woes: Instead of one set of metrics, DB administrators now need to monitor multiple, making anomaly detection a more daunting task.
 
 7. Cost:- Implementing a data partitioning strategy may require additional hardware, software, or infrastructure, leading to increased costs. Furthermore, the added complexity of managing a partitioned system may result in higher operational expenses.
