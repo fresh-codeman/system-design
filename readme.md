@@ -8,6 +8,8 @@ we will learn about the high level and low level design. following are the few t
 - [Caching](/high-level-design/caching.md)
 - [cdn](/high-level-design/cdn.md)
 - [Date partitioning](/high-level-design/data-partitioning.md)
+- [proxies](/high-level-design/data-partitioning.md)
+- [redundancy and replication](/high-level-design/redundancy-and-replicatoin.md)
 
 ## Low level system design
 
